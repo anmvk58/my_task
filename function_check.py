@@ -16,3 +16,5 @@ def scan_by_exact_string (file_paths, str_to_scan):
             print(f"Scanned {i}/{len(file_paths)} \n--'{str_to_scan}' founded in {len(output_file_paths)} files")
     print(f"=========Done scanning: string '{str_to_scan}' founded in {len(output_file_paths)} files===========")
     return output_file_paths
+
+//this function check key in file
