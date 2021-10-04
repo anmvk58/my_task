@@ -56,6 +56,15 @@ def write_result_to_xlsx(file_path, data):
 
     workbook.close()
 
+# get all file with extension parameter and directory
+def get_file_paths(dir, file_ext):
+    result = []
+    for root, dirs, files in os.walk(dir):
+        for name in files:
+            if name.endswith(f".{file_ext}"):
+                result.append(os.path.join(root, name))
+    print(f"There are **{len(result)} {file_ext}** files in the directory")
+    return result    
 
 if __name__ == '__main__':
     # #test get table name to search
